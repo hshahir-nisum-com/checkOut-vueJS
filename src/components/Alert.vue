@@ -1,5 +1,10 @@
 <template>
-  <div v-if="visible" :class="[userPosition, userColor]" class="w-full lg:w-3/12 border-l-4 p-4" role="alert">
+  <div
+    v-if="visible"
+    :class="[userPosition, userColor]"
+    class="w-full lg:w-3/12 border-l-4 p-4"
+    role="alert"
+  >
     <p class="font-bold">{{ title }}</p>
     <p>{{ description }}</p>
   </div>
@@ -14,12 +19,12 @@ export default {
     position: String,
     title: String,
     description: String,
-    color: String
+    color: String,
   },
   data() {
     return {
       userPosition: "",
-      userColor: ""
+      userColor: "",
     };
   },
   watch: {
@@ -53,7 +58,7 @@ export default {
         default:
           this.userPosition = this.topRight;
       }
-    }
+    },
   },
   computed: {
     topRight() {
@@ -76,7 +81,7 @@ export default {
     },
     warnning() {
       return "bg-yellow-100 border-yellow-500 text-yellow-700";
-    }
-  }
+    },
+  },
 };
 </script>

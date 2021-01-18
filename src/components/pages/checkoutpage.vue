@@ -7,8 +7,8 @@
       @handle-card="handleCard"
       @change-parent="handleAlert"
       :total="total"
-    ></Payment>
-    <Summary :items="items"></Summary>
+    />
+    <Summary :items="items" />
     <Alert
       :visible="alertVisible"
       position="top-right"
