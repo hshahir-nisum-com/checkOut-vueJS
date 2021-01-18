@@ -1,11 +1,14 @@
 <template>
-  <div>
+  <div
+    :class="isCard ? '' : 'lg:h-screen'"
+    class="container mx-auto p-6 grid grid-cols-1 row-gap-12 lg:grid-cols-10 lg:col-gap-10 lg:pt-12"
+  >
     <Payment
       @handle-card="handleCard"
       @change-parent="handleAlert"
       :total="total"
-    />
-    <Summary :items="items" />
+    ></Payment>
+    <Summary :items="items"></Summary>
     <Alert
       :visible="alertVisible"
       position="top-right"
